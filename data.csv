@@ -1,0 +1,101 @@
+Member_Name_Surname_Per_Redemption,Reward_Received,Brand,Reward_Value_Amount_in_Dollars,Time_to_Reward_Received_in_Seconds,Redemptions_by_User,Point_Value_per_Redemption,Satisfaction_Rating_on_Reward,Cost_Per_Redemption_in_Dollars,Country
+Jane Smith,Amazon Gift Card,Uber,50,43,8,500,3.906215812,66,Kenya
+David Thompson,Coursera Subscription,Amazon,10,9,2,250,3.797087902,67,Kenya
+James Wilson,Netflix Gift Card,Coursera,50,5,9,750,4.372270532,72,Kenya
+David Thompson,Spotify Subscription,Amazon,50,23,5,750,4.209810823,24,Kenya
+Alice Johnson,Spotify Gift Card,Coursera,10,41,7,1000,3.767191664,41,Kenya
+John Doe,Spotify Subscription,Spotify,50,14,9,250,3.145368446,52,Kenya
+Jane Smith,Spotify Subscription,Amazon,75,49,7,1000,4.452482868,62,Kenya
+Bob Brown,Spotify Gift Card,Amazon,50,16,3,500,3.846510613,63,South Africa
+Sarah Clark,Amazon Gift Card,Uber,25,36,7,1000,4.753615404,58,Kenya
+Emily Davis,Uber Gift Card,Spotify,75,17,3,750,3.412657024,85,Nigeria
+Sarah Clark,Coursera Subscription,Coursera,50,25,8,1000,4.053064163,20,Kenya
+Carol White,Amazon Gift Card,Spotify,50,9,8,250,3.684762837,79,Rwanda
+Emily Davis,Coursera Gift Card,Netflix,10,38,6,500,3.455404682,93,Nigeria
+Sarah Clark,Netflix Subscription,Spotify,50,3,2,750,4.842789576,43,Kenya
+Alice Johnson,Netflix Subscription,Amazon,10,29,3,250,3.99932447,52,Kenya
+Sarah Clark,Spotify Gift Card,Coursera,10,52,8,500,3.508950417,49,Kenya
+Sarah Clark,Coursera Gift Card,Coursera,100,23,5,1000,3.413688948,20,Kenya
+Jane Smith,Amazon Gift Card,Coursera,25,42,7,250,4.899910492,39,Kenya
+Michael Lee,Amazon Gift Card,Netflix,10,7,6,1000,4.681973171,25,Rwanda
+Jane Smith,Amazon Gift Card,Netflix,10,35,9,250,3.713900295,46,Kenya
+Bob Brown,Uber Gift Card,Netflix,75,4,7,500,4.5560037,73,South Africa
+Jane Smith,Coursera Gift Card,Spotify,50,7,6,500,3.51877835,60,Kenya
+Alice Johnson,Uber Gift Card,Uber,25,34,6,500,3.115835613,82,Kenya
+Emily Davis,Uber Subscription,Uber,10,29,8,750,4.377721534,24,Nigeria
+Jane Smith,Coursera Subscription,Netflix,25,26,9,1000,3.399492549,30,Kenya
+Michael Lee,Coursera Gift Card,Netflix,50,11,3,500,4.751811532,99,Rwanda
+Alice Johnson,Coursera Gift Card,Netflix,10,40,8,250,3.643730562,97,Kenya
+Emily Davis,Coursera Gift Card,Netflix,10,12,1,250,4.932450081,37,Nigeria
+David Thompson,Uber Gift Card,Coursera,10,42,5,1000,4.201929402,16,Kenya
+Emily Davis,Spotify Subscription,Uber,25,42,5,250,4.150583184,98,Nigeria
+James Wilson,Netflix Gift Card,Uber,100,47,8,250,4.273609685,26,Kenya
+David Thompson,Spotify Subscription,Spotify,50,47,8,750,4.043054591,80,Kenya
+Alice Johnson,Spotify Subscription,Netflix,75,39,5,500,4.814471303,70,Kenya
+Michael Lee,Coursera Gift Card,Spotify,75,33,3,500,4.753451148,53,Rwanda
+Jane Smith,Amazon Subscription,Netflix,100,32,2,1000,3.142113604,74,Kenya
+Sarah Clark,Uber Gift Card,Amazon,75,52,2,1000,4.423656262,92,Kenya
+Carol White,Amazon Subscription,Uber,50,1,6,750,3.331903061,95,Rwanda
+John Doe,Uber Gift Card,Coursera,25,7,4,750,3.314449918,22,Kenya
+Jane Smith,Uber Subscription,Spotify,10,33,8,1000,4.735546465,20,Kenya
+Emily Davis,Amazon Subscription,Netflix,10,48,3,750,3.579046213,98,Nigeria
+Alice Johnson,Netflix Gift Card,Spotify,100,24,1,1000,3.185187747,36,Kenya
+James Wilson,Uber Subscription,Coursera,25,18,9,250,3.57312732,23,Kenya
+Alice Johnson,Netflix Subscription,Netflix,50,19,6,1000,3.55782625,70,Kenya
+Carol White,Netflix Gift Card,Coursera,100,57,5,1000,4.155605038,63,Rwanda
+David Thompson,Amazon Subscription,Amazon,75,44,8,1000,3.275416941,55,Kenya
+Bob Brown,Uber Gift Card,Coursera,100,6,5,500,4.294946458,26,South Africa
+John Doe,Netflix Subscription,Coursera,100,55,5,250,4.050850223,91,Kenya
+Carol White,Coursera Subscription,Spotify,25,35,3,500,3.573587412,56,Rwanda
+John Doe,Spotify Gift Card,Netflix,75,40,1,250,3.245955758,40,Kenya
+Carol White,Uber Subscription,Amazon,25,32,3,500,4.841447432,20,Rwanda
+John Doe,Amazon Gift Card,Netflix,25,27,5,750,4.826901562,55,Kenya
+Emily Davis,Amazon Subscription,Uber,25,44,8,750,4.96215155,46,Nigeria
+Sarah Clark,Uber Subscription,Amazon,100,8,3,1000,3.19429982,16,Kenya
+Carol White,Spotify Subscription,Coursera,10,13,4,500,4.272636288,49,Rwanda
+James Wilson,Netflix Subscription,Netflix,10,16,8,1000,3.227094155,20,Kenya
+Michael Lee,Coursera Gift Card,Amazon,25,34,5,750,3.710166662,40,Rwanda
+Michael Lee,Coursera Gift Card,Spotify,25,3,7,500,3.898365599,30,Rwanda
+Michael Lee,Netflix Gift Card,Netflix,75,53,1,750,3.472098877,78,Rwanda
+Jane Smith,Spotify Gift Card,Uber,25,14,4,500,4.42234939,71,Kenya
+John Doe,Coursera Subscription,Spotify,75,28,2,500,3.379423847,31,Kenya
+John Doe,Netflix Subscription,Netflix,100,52,1,500,4.207423872,45,Kenya
+Alice Johnson,Spotify Subscription,Coursera,25,40,9,250,3.33211847,67,Kenya
+Bob Brown,Amazon Subscription,Coursera,10,4,5,750,4.084738815,89,South Africa
+Alice Johnson,Amazon Gift Card,Spotify,50,15,2,1000,3.71672686,48,Kenya
+Jane Smith,Amazon Gift Card,Netflix,25,3,7,250,3.381118023,24,Kenya
+Carol White,Spotify Gift Card,Spotify,100,3,1,500,3.338965646,52,Rwanda
+Michael Lee,Amazon Gift Card,Amazon,100,58,9,1000,3.007998604,93,Rwanda
+Jane Smith,Coursera Gift Card,Netflix,25,54,2,750,3.791179096,67,Kenya
+Alice Johnson,Netflix Subscription,Amazon,75,34,2,1000,4.624808585,69,Kenya
+Sarah Clark,Coursera Gift Card,Amazon,100,21,7,1000,3.316294776,92,Kenya
+James Wilson,Uber Subscription,Netflix,10,5,9,750,3.061405054,61,Kenya
+David Thompson,Uber Subscription,Uber,25,21,6,500,4.963540058,52,Kenya
+Alice Johnson,Amazon Subscription,Coursera,25,37,6,250,4.722191992,46,Kenya
+James Wilson,Amazon Gift Card,Coursera,50,14,9,1000,3.69193052,40,Kenya
+Carol White,Spotify Subscription,Spotify,25,30,3,1000,3.072182383,45,Rwanda
+Emily Davis,Spotify Gift Card,Amazon,25,48,1,250,3.3277234,17,Nigeria
+Alice Johnson,Uber Subscription,Spotify,10,51,8,1000,3.427279828,19,Kenya
+Emily Davis,Amazon Gift Card,Coursera,75,38,3,500,4.180723223,77,Nigeria
+Alice Johnson,Coursera Gift Card,Amazon,50,52,9,1000,4.13664021,24,Kenya
+Bob Brown,Coursera Subscription,Uber,25,15,7,1000,3.328785343,39,South Africa
+Michael Lee,Coursera Gift Card,Coursera,25,34,1,500,3.072284538,97,Rwanda
+Michael Lee,Spotify Subscription,Amazon,50,17,2,1000,4.154141472,59,Rwanda
+Alice Johnson,Uber Gift Card,Coursera,100,32,9,750,3.697720788,37,Kenya
+Carol White,Amazon Gift Card,Amazon,100,12,5,250,4.279973575,18,Rwanda
+David Thompson,Spotify Subscription,Netflix,100,41,2,1000,4.03278184,23,Kenya
+Sarah Clark,Amazon Subscription,Uber,25,37,9,1000,3.459991339,64,Kenya
+Carol White,Uber Gift Card,Coursera,25,58,9,1000,4.293725008,12,Rwanda
+Carol White,Amazon Gift Card,Uber,50,18,9,250,4.222488458,70,Rwanda
+David Thompson,Amazon Gift Card,Spotify,50,48,2,500,3.822991749,82,Kenya
+Alice Johnson,Netflix Subscription,Spotify,75,33,1,750,4.396677151,11,Kenya
+Carol White,Spotify Gift Card,Coursera,100,35,7,750,4.41994386,22,Rwanda
+Alice Johnson,Uber Subscription,Amazon,10,6,5,1000,3.605018609,46,Kenya
+Sarah Clark,Amazon Subscription,Coursera,75,18,3,1000,4.131622362,98,Kenya
+Bob Brown,Uber Subscription,Amazon,100,38,8,750,4.639537397,99,South Africa
+John Doe,Uber Gift Card,Coursera,10,25,8,1000,4.087717082,76,Kenya
+Alice Johnson,Spotify Subscription,Spotify,100,16,4,1000,3.191969735,54,Kenya
+Emily Davis,Spotify Gift Card,Uber,100,8,1,1000,4.909624818,38,Nigeria
+Carol White,Coursera Subscription,Netflix,75,46,9,1000,3.187674621,18,Rwanda
+Jane Smith,Uber Gift Card,Spotify,25,59,4,250,3.499095852,17,Kenya
+David Thompson,Netflix Gift Card,Amazon,10,16,3,250,3.96812828,17,Kenya
