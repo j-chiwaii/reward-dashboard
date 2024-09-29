@@ -3,14 +3,35 @@ import pandas as pd
 import numpy as np
 import datetime
 from PIL import Image
+import base64
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
 st.set_page_config(layout="wide", page_title="Advanced Rewards Program Analytics")
 st.markdown('<style>div.block-container{padding-top:1rem;}</style>', unsafe_allow_html=True)
-image = Image.open('logon.jpg')
 
+# Logo section
+col1, col2, col3 = st.columns([0.2, 0.6, 0.2])
+# Function to convert image to base64
+def get_image_as_base64(image_path):
+    with open(image_path, "rb") as image_file:
+        return base64.b64encode(image_file.read()).decode()
+
+# Get the image in base64 format
+image_base64 = get_image_as_base64('logon.jpg')
+
+# Display the image with a dark background only
+with col1:
+    # Inject CSS and HTML for the image with a dark background
+    st.markdown(
+        f"""
+        <div style='display: inline-block; background-color: black; padding: 10px; border-radius: 10px;'>
+            <img src='data:image/jpg;base64,{image_base64}' width='100'>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
 # Reading data
 df = pd.read_csv("data.csv")
@@ -31,7 +52,6 @@ def segment_users(row):
 df['User_Segment'] = df.apply(segment_users, axis=1)
 
 # Page setup
-
 st.markdown("""
     <style>
     .main {background-color: #f0f2f6;}
@@ -49,8 +69,6 @@ with col2:
     st.markdown("<h1 style='color:black;'>🏆 Advanced Rewards Program Analytics</h1>", unsafe_allow_html=True)
     st.markdown(f"<p style='color:black;'>Last updated: {datetime.datetime.now().strftime('%d %B %Y')}</p>", unsafe_allow_html=True)
 
-
-# Key Metrics
 # Key Metrics
 st.header("📊 Key Program Metrics")
 col1, col2, col3, col4 = st.columns(4)
@@ -59,6 +77,34 @@ col2.markdown(f"<div class='stMetric'><p class='metric-label'>Total Redemptions<
 col3.markdown(f"<div class='stMetric'><p class='metric-label'>Avg. Satisfaction</p><p class='metric-value'>{df['Satisfaction_Rating_on_Reward'].mean():.2f}</p></div>", unsafe_allow_html=True)
 col4.markdown(f"<div class='stMetric'><p class='metric-label'>Total Reward Value</p><p class='metric-value'>${df['Reward_Value_Amount_in_Dollars'].sum():,.0f}</p></div>", unsafe_allow_html=True)
 
+# New Analysis Section
+st.header("🔍 User Engagement Analysis")
+col1, col2 = st.columns(2)
+
+with col1:
+    # Chart 1: User Engagement Distribution
+    engagement_bins = pd.cut(df['Engagement_Score'], bins=5, labels=['Very Low', 'Low', 'Medium', 'High', 'Very High'])
+    engagement_dist = engagement_bins.value_counts().sort_index()
+    
+    fig = px.bar(x=engagement_dist.index, y=engagement_dist.values, 
+                 title="User Engagement Distribution",
+                 labels={'x': 'Engagement Level', 'y': 'Number of Users'},
+                 color=engagement_dist.index,
+                 color_discrete_sequence=px.colors.qualitative.Set3)
+    fig.update_layout(showlegend=False)
+    st.plotly_chart(fig, use_container_width=True)
+
+with col2:
+    # Chart 2: Reward Efficiency by Brand
+    brand_efficiency = df.groupby('Brand')['Efficiency'].mean().sort_values(ascending=False)
+    
+    fig = px.bar(x=brand_efficiency.index, y=brand_efficiency.values,
+                 title="Reward Efficiency by Brand",
+                 labels={'x': 'Brand', 'y': 'Efficiency (Value/$)'},
+                 color=brand_efficiency.index,
+                 color_discrete_sequence=px.colors.qualitative.Pastel)
+    fig.update_layout(showlegend=False)
+    st.plotly_chart(fig, use_container_width=True)
 
 # User Segmentation Analysis
 st.header("👥 User Segmentation Analysis")
