@@ -11,14 +11,12 @@ from plotly.subplots import make_subplots
 st.set_page_config(layout="wide", page_title="Rewards Program Dashboard")
 st.markdown('<style>div.block-container{padding-top:1rem;}</style>', unsafe_allow_html=True)
 
-# Logo section
 col1, col2, col3 = st.columns([0.2, 0.6, 0.2])
 # Function to convert image to base64
 def get_image_as_base64(image_path):
     with open(image_path, "rb") as image_file:
         return base64.b64encode(image_file.read()).decode()
 
-# Get the image in base64 format
 image_base64 = get_image_as_base64('logon.jpg')
 
 with col1:
@@ -69,7 +67,7 @@ st.markdown("""
 # Header
 col1, col2, col3 = st.columns([0.2, 0.6, 0.2])
 with col2:
-    st.markdown("<h1 style='color:black;'>🏆 Advanced Rewards Program Analytics</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='color:black;'>🏆 Rewards Program Dashboard</h1>", unsafe_allow_html=True)
     st.markdown(f"<p style='color:black;'>Last updated: {datetime.datetime.now().strftime('%d %B %Y')}</p>", unsafe_allow_html=True)
 
 # Add data filtering options
