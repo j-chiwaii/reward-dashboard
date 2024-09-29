@@ -8,7 +8,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-st.set_page_config(layout="wide", page_title="Advanced Rewards Program Analytics")
+st.set_page_config(layout="wide", page_title="Rewards Program Dashboard")
 st.markdown('<style>div.block-container{padding-top:1rem;}</style>', unsafe_allow_html=True)
 
 # Logo section
@@ -21,9 +21,7 @@ def get_image_as_base64(image_path):
 # Get the image in base64 format
 image_base64 = get_image_as_base64('logon.jpg')
 
-# Display the image with a dark background only
 with col1:
-    # Inject CSS and HTML for the image with a dark background
     st.markdown(
         f"""
         <div style='display: inline-block; background-color: black; padding: 10px; border-radius: 10px;'>
