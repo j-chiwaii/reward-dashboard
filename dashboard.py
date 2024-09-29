@@ -22,7 +22,7 @@ st.sidebar.header("Dashboard Controls")
 
 # Column selection
 st.sidebar.subheader("Select Columns")
-date_column = st.sidebar.selectbox("Date Column", options=df.columns)
+date_column = st.sidebar.selectbox("Date Column (optional)", options=['None'] + list(df.columns))
 brand_column = st.sidebar.selectbox("Brand Column", options=df.columns)
 user_column = st.sidebar.selectbox("User Column", options=df.columns)
 redemptions_column = st.sidebar.selectbox("Redemptions Column", options=df.columns)
@@ -30,18 +30,24 @@ satisfaction_column = st.sidebar.selectbox("Satisfaction Column", options=df.col
 reward_value_column = st.sidebar.selectbox("Reward Value Column", options=df.columns)
 point_value_column = st.sidebar.selectbox("Point Value Column", options=df.columns)
 
-# Convert date column to datetime
-df[date_column] = pd.to_datetime(df[date_column])
-
-# Date range selector
-st.sidebar.subheader("Date Range")
-min_date = df[date_column].min().date()
-max_date = df[date_column].max().date()
-start_date = st.sidebar.date_input("Start Date", min_date, min_value=min_date, max_value=max_date)
-end_date = st.sidebar.date_input("End Date", max_date, min_value=min_date, max_value=max_date)
-
-# Filter data based on date range
-df_filtered = df[(df[date_column].dt.date >= start_date) & (df[date_column].dt.date <= end_date)]
+# Convert date column to datetime if it's a valid date column
+if date_column != 'None':
+    try:
+        df[date_column] = pd.to_datetime(df[date_column])
+        # Date range selector
+        st.sidebar.subheader("Date Range")
+        min_date = df[date_column].min().date()
+        max_date = df[date_column].max().date()
+        start_date = st.sidebar.date_input("Start Date", min_date, min_value=min_date, max_value=max_date)
+        end_date = st.sidebar.date_input("End Date", max_date, min_value=min_date, max_value=max_date)
+        # Filter data based on date range
+        df_filtered = df[(df[date_column].dt.date >= start_date) & (df[date_column].dt.date <= end_date)]
+    except:
+        st.warning(f"The selected column '{date_column}' doesn't contain valid date information. Proceeding without date filtering.")
+        df_filtered = df
+else:
+    st.warning("No date column selected. Proceeding without date filtering.")
+    df_filtered = df
 
 # Brand selector
 selected_brands = st.sidebar.multiselect("Select Brands", options=df[brand_column].unique(), default=df[brand_column].unique())
@@ -108,8 +114,6 @@ if st.button("Generate CSV"):
 # Save current state
 if st.button("Save Dashboard State"):
     state = {
-        'start_date': str(start_date),
-        'end_date': str(end_date),
         'selected_brands': selected_brands,
         'selected_segments': selected_segments,
         'column_mapping': {
@@ -122,6 +126,9 @@ if st.button("Save Dashboard State"):
             'point_value_column': point_value_column
         }
     }
+    if date_column != 'None':
+        state['start_date'] = str(start_date)
+        state['end_date'] = str(end_date)
     st.json(state)
     st.success("Dashboard state saved! You can copy this JSON to restore the state later.")
 
