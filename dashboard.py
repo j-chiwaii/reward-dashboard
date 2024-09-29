@@ -12,7 +12,9 @@ st.set_page_config(layout="wide", page_title="Rewards Program Dashboard Controls
 # Function to load data
 @st.cache_data
 def load_data():
-    return pd.read_csv("data.csv")
+    df = pd.read_csv("data.csv")
+    df['Order Date'] = pd.to_datetime(df['Order Date'])
+    return df
 
 # Load data
 df = load_data()
@@ -22,13 +24,13 @@ st.sidebar.header("Dashboard Controls")
 
 # Date range selector
 st.sidebar.subheader("Date Range")
-min_date = df['Redemption_Date'].min()
-max_date = df['Redemption_Date'].max()
+min_date = df['Order Date'].min().date()
+max_date = df['Order Date'].max().date()
 start_date = st.sidebar.date_input("Start Date", min_date, min_value=min_date, max_value=max_date)
 end_date = st.sidebar.date_input("End Date", max_date, min_value=min_date, max_value=max_date)
 
 # Filter data based on date range
-df_filtered = df[(df['Redemption_Date'] >= str(start_date)) & (df['Redemption_Date'] <= str(end_date))]
+df_filtered = df[(df['Order Date'].dt.date >= start_date) & (df['Order Date'].dt.date <= end_date)]
 
 # Brand selector
 selected_brands = st.sidebar.multiselect("Select Brands", options=df['Brand'].unique(), default=df['Brand'].unique())
@@ -53,6 +55,7 @@ col4.metric("Total Reward Value", f"${df_filtered['Reward_Value_Amount_in_Dollar
 
 # User Engagement Distribution
 st.header("User Engagement Distribution")
+df_filtered['Engagement_Score'] = df_filtered['Redemptions_by_User'] * df_filtered['Satisfaction_Rating_on_Reward']
 engagement_bins = pd.cut(df_filtered['Engagement_Score'], bins=5, labels=['Very Low', 'Low', 'Medium', 'High', 'Very High'])
 engagement_dist = engagement_bins.value_counts().sort_index()
 fig = px.bar(x=engagement_dist.index, y=engagement_dist.values, 
@@ -64,6 +67,7 @@ st.plotly_chart(fig, use_container_width=True)
 
 # Reward Efficiency by Brand
 st.header("Reward Efficiency by Brand")
+df_filtered['Efficiency'] = df_filtered['Reward_Value_Amount_in_Dollars'] / df_filtered['Point_Value_per_Redemption']
 brand_efficiency = df_filtered.groupby('Brand')['Efficiency'].mean().sort_values(ascending=False)
 fig = px.bar(x=brand_efficiency.index, y=brand_efficiency.values,
              labels={'x': 'Brand', 'y': 'Efficiency (Value/$)'},
